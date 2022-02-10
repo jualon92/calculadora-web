@@ -93,6 +93,7 @@ input{
      border:solid  #F3F7F8;
     padding:10px; 
     direction: rtl; 
+    
 }
 
 .contenedor-personas{
@@ -102,6 +103,9 @@ input{
 
 }
 
+.hola .hola{
+
+}
 #bill,#personas{
      
     color:#A1B6B7;
@@ -193,7 +197,7 @@ input{
  
 .reset{
     align-self: center;
-    transform: translateY(75px);
+    transform: translateY(35px);
     background-color: #0C686D;
     width: 100%;
     padding:15px;
@@ -236,5 +240,11 @@ input{
 .activo{
     background-color: #2AA69B!important;
     transform: translateY(3px);
+    box-shadow: 0 4px #666;
+}
+
+.reset:active{
+    background-color: #2AA69B!important;
+    
     box-shadow: 0 4px #666;
 }

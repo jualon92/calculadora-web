@@ -125,3 +125,17 @@ for (const input of inputsCalculo) { //al detectar entrada input se actualizan l
 
     })
 }
+
+
+
+document.querySelector(".reset").addEventListener("click", e => {
+    valorOperacion = 0 // rever, no me gusta 
+    numeroPersonas = 0
+    eleccionPorcentaje = 0
+    tipAmount.innerHTML =  0 
+    totalNumero.innerHTML = 0
+    inputBill.value = 0
+    inputPersonas.value = 0
+    apagarBotones()
+
+})
