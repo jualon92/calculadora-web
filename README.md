@@ -7,8 +7,8 @@ Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor]
 ![image](https://user-images.githubusercontent.com/46230600/153505108-c42b9bc7-6abe-4ff5-9cc0-ae9965a053b3.png)
 
 ## Lista de Tareas pendientes
-- Custom no  implementado
-- No es responsive
+- Falta implementar custom
+- Falta hacerla responsive 
 - Estaria bueno utilizar nombres de clase basado en BEM, y utilizar Sass
 
 
