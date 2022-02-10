@@ -1,44 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/b70609df13.js" crossorigin="anonymous"></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <div class="contenedor-titulo">
+    <div class="titulo">SPLI</div>
+    <div class="titulo">TTER</div>
+  </div>
 
-  Bill
+  <section>
+    <div class="contenedor-calculadora">
+      <div class="contenedor-datos">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <div class="cantidad-dinero">
+          <label for="bill"> Bill</label>
+          <i class="fa-solid fa-dollar-sign billete icono-ingreso"></i>
+          <input class="refresco" type="text" id="bill" name="bill" placeholder="0">  
+        </div>
 
-  Number of People
+        <div class="contenedor-interface">
+          <label for="tip">Select Tip %</label>
+          <div class="contenedor-botonera">
+            <button type="button" class="interface__boton refresco"> 5% </button>
+            <button type="button" class="interface__boton refresco">  10% </button>
+            <button type="button" class="interface__boton refresco"> 15% </button>
+            <button type="button" class="interface__boton refresco"> 25% </button>
+            <button type="button" class="interface__boton refresco"> 50% </button>
+            <button type="button" class="interface__boton boton-custom refresco"> Custom </button>
 
-  Tip Amount
-  / person
+          </div>
 
-  Total
-  / person
 
-  Reset
-  
+
+        </div>
+
+        <div class="contenedor-personas">
+          <label for="personas">Number of people</label>
+          <i class="fa-solid fa-user icono-ingreso personaIcono"></i>
+          <input class="refresco" type="text" id="personas" name="personas" placeholder="0">
+        </div>
+
+      </div>
+      <div class="contenedor-resumen">
+
+        <div class="cantidad">
+          <div class="cantidad__contenido  ">
+            Tip Amount
+           <div class="persona">/ person</div>  
+          </div>
+
+          <div class="cantidad__monto number">  <i class="fa-solid fa-dollar-sign billete-num"></i> <span class="tip__number"> 0.00</span>
+              </div>
+        </div>
+
+        <div class="total">
+          <div class="total__texto">
+            <div>Total </div>
+            <div class="persona"> / person</div>
+
+
+          </div>
+
+          <div class="total__monto  number">  <i class="fa-solid fa-dollar-sign billete-num"></i>
+            <span class="total__numero">0.00 </span> </div>
+
+
+
+
+
+        </div>
+        <button class="reset" type="button">
+          RESET
+        </button>
+      </div>
+  </section>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+  <script src="js/main.js"></script>
 </html>

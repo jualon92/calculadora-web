@@ -1,0 +1,240 @@
+body{                             /*por hacer: utilizar sass, convencion nombres */
+    background-color:  #C5E4E7;
+    font-family:  'Space Mono', monospace;
+} 
+/*
+h1{
+    margin-top: 25%;
+    width: 13%;
+ 
+    height: 80px;
+ 
+     white-space: pre;  
+    font-family:  'Space Mono', monospace;
+    word-break: break-all;
+    margin: 0 auto;
+    margin-top: 10%;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color:  hsl(183, 100%, 15%)
+}
+*/
+
+.titulo{
+    letter-spacing: 10px;
+    color:  hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-weight: 30px;
+}
+
+ 
+#personas::placeholder,#bill::placeholder{
+     color:#A1B6B7;
+}
+ 
+.contenedor-titulo{ 
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 10%;
+}
+ 
+.contenedor-calculadora{
+    display: flex;
+    margin:6% 15% 10% 15%;
+    min-height: 450px;
+ /*   border: solid red; */
+    border-radius:30px;
+    background-color: white;
+    padding:50px;
+}
+
+.contenedor-datos{
+    width: 50%;
+ /*   border: solid rebeccapurple; */
+    padding:50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+.contenedor-resumen{
+    width: 50%;
+    padding:50px;
+    gap:60px;
+    background-color: #00474B;
+    color:white;
+    border-radius:20px;
+}
+
+.cantidad-dinero{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.contenedor-interface{
+    display:flex;
+    flex-direction: column;   
+  /*  transform: translateY(18px); /*rever, estaria bueno que sea por bloques*/
+}
+
+label{
+    color:#697D7E;
+    font-weight: bolder;
+   /* transform: translateY(-8px); */
+   margin-bottom:8px;
+}
+input{
+    font-size: 24px;
+    background-color:   #F3F8FB;
+    border-radius:3px;
+     border:solid  #F3F7F8;
+    padding:10px; 
+    direction: rtl; 
+}
+
+.contenedor-personas{
+    display: flex;
+    flex-direction: column;
+   /* transform: translateY(10px); */
+
+}
+
+#bill,#personas{
+     
+    color:#A1B6B7;
+    font-weight: 700;
+     
+}
+
+.billete{
+  
+     position:absolute;
+    
+}
+ 
+.billete{
+    transform: translateY(45px); 
+} 
+.personaIcono{
+    transform: translateY(44px);
+    position: absolute;
+}
+
+.icono-ingreso{ 
+    margin-left: 20px;
+    width: 10px;
+    color:hsl(184, 14%, 56%);
+}
+
+.persona{ 
+    position:absolute;
+  
+        color:#6A9EA2;
+    
+}
+
+.contenedor-botonera{
+    column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    flex-wrap: wrap;
+}
+.contenedor-botonera button{
+    height: 40px;
+    width: 100px;
+    background-color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size:large;
+    color:white;
+    border-radius:6px;
+    border:solid #134144;
+}
+ 
+.contenedor-interface label{
+  /*  transform:translateY(-10px); */
+}
+
+.contenedor-resumen{
+    display:flex;
+    flex-direction: column;
+}
+
+.cantidad{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 35px; /*segun ej*/
+}
+
+.total{
+    display:flex;
+    justify-content: space-between;
+}
+
+.total__texto{
+    width: 110px;
+}
+
+.cantidad__contenido{
+    width: 100px;
+}
+
+
+.cantidad__monto,.total__monto{
+    font-size:40px;
+}
+/*
+.total__texto,.cantidad__contenido{
+    align-self: center; 
+}*/
+ 
+.reset{
+    align-self: center;
+    transform: translateY(75px);
+    background-color: #0C686D;
+    width: 100%;
+    padding:15px;
+  
+    border:transparent;
+    border-radius:6px;
+    color:#044447;
+    font-weight: 700;
+    font-size:16px;
+    
+}
+
+.number{
+    color:#2AA69B;
+    transform: translateY(-5px);
+}
+
+ 
+
+.billete-num{
+    font-size:30px;
+    transform: translateX(15px);
+}
+
+ /*
+.interface__boton:active{
+    background-color: #2AA69B;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}*/
+
+
+ 
+.contenedor-botonera .boton-custom{
+    background-color:  #F3F8FB;
+    color:#5A7677;
+    border-color:#F1F5F6;
+}
+
+.activo{
+    background-color: #2AA69B!important;
+    transform: translateY(3px);
+    box-shadow: 0 4px #666;
+}
