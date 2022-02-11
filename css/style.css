@@ -250,7 +250,7 @@ input{
 }
 
 
-@media (max-width:376px){
+@media (max-width:426px){
     .contenedor-calculadora{
         margin:0;
         flex-direction:column;
@@ -288,5 +288,11 @@ input{
 
     .interface-boton{
         width: 125px;
+    }
+}
+
+@media (max-width:320){
+    .contenedor-calculadora{
+        padding:30px;
     }
 }
