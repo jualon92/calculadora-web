@@ -9,14 +9,14 @@ const inputsCalculo = document.querySelectorAll(".refresco")
 const tipAmount = document.querySelector(".tip__number")
 const totalNumero = document.querySelector(".total__numero")
 
-
+/*
 let valorOperacion = 0 // rever, podrian utilizarse funciones puras que retorn el valor y luego pasarse a html. sin necesidad de asignarlo ?
 let numeroPersonas = 0
 let eleccionPorcentaje = 0
+ 
 let bandera = true
-
+*/
 const datoSinIngresar = () => (inputPersonas.value == false || inputBill.value == false || !hayBotonActivo())   // si no hay ingreso en input, o en calculo, o boton activo
-
 
 const getTotal = (valor, personas, tip) => parseInt(valor / personas) + parseInt(tip)
 
@@ -113,7 +113,7 @@ inputPersonas.addEventListener("input", e => {
 
 
 for (const input of inputsPorcentajes) {
-    input.addEventListener("click", e => {  
+    input.addEventListener("click", e => {
 
         eleccionPorcentaje = parseInt(input.innerText.split("%")[0])
         //mantener boton seleccionado , permanencia

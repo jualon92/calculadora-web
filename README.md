@@ -19,27 +19,20 @@ Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor]
 ## Proceso
 Para los contenedores utilice flex box, margin, transform:translate(x,y) y position absolute para iconos.
 
-El boton de porcentaje clickeado es recordado mediante JS:
-Al dispararse evento clickear se quita clase activo a todos los botones y se agrega al boton clickeado. 
-El texto  interior del boton es pasado a integer y asignado a variable para recordar la eleccion.
 
+Me parece mejor que la cuenta se haga cuando ya fueron ingresados los tres valores. Se verifica que los input.value no sean falsy y este activo un boton antes de mostrar datos
 
-Me parece mejor que la cuenta se haga cuando ya fueron ingresados los tres valores. Se verifica que no hay input.value falsy antes de mostrar datos
-
-
-Borrar datos ingresados de inputs provoca que ecuacion devuelve NaN (se utiliza string vacio)
-Por esto, funcion getDisplay() devuelve 0 si input.value es string vacio.
+Borrar datos ingresados de inputs provoca que ecuacion devuelve NaN (se utiliza string vacio) => funcion getDisplay() devuelve 0 si input.value es string vacio.
 
 
 ### Herramientas
 HTML/CSS/Vanilla JS
 
  
-
 ### Que aprendi
-Flex es muy comodo para organizar elementos. Position absolute permite sacar del flujo elementos, util para iconos.
+Flex es muy comodo para organizar elementos. Position absolute permite sacar del flujo elementos, util para iconos. Transform:translate(x,y)  
 
-JS : no repetir logica, funciones puras facilitan legibilidad.
+JS : no repetir logica, funciones puras facilitan legibilidad, no abusar if, operador ternario,  arrow functions, funciones de orden superior (some)
 
 
 ### Recursos utiles
