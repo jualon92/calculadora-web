@@ -15,15 +15,41 @@ let numeroPersonas = 0
 let eleccionPorcentaje = 0
 let bandera = true
 
-const datoSinIngresar = () => (eleccionPorcentaje == false || numeroPersonas == false)
+const datoSinIngresar = () => (inputPersonas.value == false || inputBill.value == false || !hayBotonActivo())   // si no hay ingreso en input, o en calculo, o boton activo
 
 
-const getTotal = () => (valorOperacion / numeroPersonas) + parseInt(tipAmount.innerHTML)
+const getTotal = (valor, personas, tip) => parseInt(valor / personas) + parseInt(tip)
 
-const getAmount = () => parseInt((valorOperacion * eleccionPorcentaje / 100) / numeroPersonas)
-
+const getAmount = (valor, personas, tip) => parseInt((valor * tip / 100) / personas)
 
 const getDisplay = (ele) => ele.value !== "" ? parseInt(ele.value) : 0.00
+
+
+const hayBotonActivo = () => Array.from(inputsPorcentajes).some(b => b.classList.contains("activo"))  // si hay un boton con clase activo activo
+
+const setTablero = () => {
+    if (!datoSinIngresar()) { // si los datos no estan vacios
+        console.log(inputPersonas.value)
+        tipAmount.innerHTML = getAmount(getDisplay(inputBill), getDisplay(inputPersonas), eleccionPorcentaje)
+        totalNumero.innerHTML = getTotal(getDisplay(inputBill), getDisplay(inputPersonas), parseInt(tipAmount.innerHTML))
+
+        //   advertencia.classList.remove("visible")
+    } else { // si falta un dato,resultados deberian ser 0 para no confundir
+        tipAmount.innerHTML = 0
+        totalNumero.innerHTML = 0
+
+        // advertencia 
+        //   advertencia.classList.add("visible")
+        console.warn("0 personas no puede calcularse")
+        console.log(inputPersonas.value)
+        console.log(valorOperacion, numeroPersonas, eleccionPorcentaje)
+
+    }
+}
+
+
+
+
 
 /*
 function getDisplay(ele){
@@ -65,6 +91,7 @@ inputPersonas.addEventListener("input", e => {
     //  e.preventDefault()
 
     numeroPersonas = getDisplay(inputPersonas)
+
     /*
     if (inputPersonas.value !== "") {
         numeroPersonas = parseInt(inputPersonas.value) // "01" => 1
@@ -84,19 +111,15 @@ inputPersonas.addEventListener("input", e => {
 //tema de botones clase de %
 
 
-for (const input of inputsPorcentajes) {
-    input.addEventListener("click", e => {
 
+for (const input of inputsPorcentajes) {
+    input.addEventListener("click", e => {  
 
         eleccionPorcentaje = parseInt(input.innerText.split("%")[0])
         //mantener boton seleccionado , permanencia
         apagarBotones() //desactivar los otros botones
         input.classList.add("activo")
-        if (!datoSinIngresar()) { //cuando ingresa porcentaje actualiza 
-
-            tipAmount.innerHTML = getAmount()
-            totalNumero.innerHTML = getTotal()
-        }
+        setTablero() //necesito  para  registrar evento click, porque boton evento input no hace nada.
     })
 
 }
@@ -114,25 +137,18 @@ function apagarBotones() {
 
 for (const input of inputsCalculo) { //al detectar entrada input se actualizan los valores 
     input.addEventListener("input", e => {
-        if (!datoSinIngresar()) {
-            tipAmount.innerHTML = getAmount()
-            totalNumero.innerHTML = parseInt(getTotal())
-        } else {
-            console.warn("faltan ingresar")
-            console.log(valorOperacion, numeroPersonas, eleccionPorcentaje)
-        }
-
-
+        setTablero()
     })
 }
 
 
 
 document.querySelector(".reset").addEventListener("click", e => {
-    valorOperacion = 0 // rever, no me gusta 
-    numeroPersonas = 0
-    eleccionPorcentaje = 0
-    tipAmount.innerHTML =  0 
+    /*
+      valorOperacion = 0 // rever, no me gusta 
+      numeroPersonas = 0
+      eleccionPorcentaje = 0*/
+    tipAmount.innerHTML = 0
     totalNumero.innerHTML = 0
     inputBill.value = 0
     inputPersonas.value = 0
