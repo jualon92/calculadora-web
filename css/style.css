@@ -93,7 +93,7 @@ input{
      border:solid  #F3F7F8;
     padding:10px; 
     direction: rtl; 
-    
+   
 }
 
 .contenedor-personas{
@@ -247,4 +247,46 @@ input{
     background-color: #2AA69B!important;
     
     box-shadow: 0 4px #666;
+}
+
+
+@media (max-width:376px){
+    .contenedor-calculadora{
+        margin:0;
+        flex-direction:column;
+        padding:40px;
+    }  
+
+    .contenedor-datos{
+        width: auto;
+        padding:0;
+    }
+
+    .contenedor-interface{
+        height: 170px;
+    }
+
+    .contenedor-botonera{
+        justify-content: center; /*me gusta como queda*/
+        row-gap: 10px
+    }
+
+    .contenedor-titulo{
+        margin-bottom: 10%;
+    }
+    .contenedor-resumen{
+        width: auto;
+      padding: 0;
+      margin-top: 40px;
+ 
+      padding: 0 20px 0 20px;
+    }
+
+    .reset{
+        transform: translateY(-25px);
+    }
+
+    .interface-boton{
+        width: 125px;
+    }
 }
