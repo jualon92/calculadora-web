@@ -296,3 +296,17 @@ input{
         padding:30px;
     }
 }
+
+
+@media screen and (width:1024px){
+    .contenedor-datos,.contenedor-resumen{
+        padding:20px;
+    }
+
+    .contenedor-calculadora{
+        padding:6% 4% 6% 4%;
+        margin: 6%;
+    }
+
+     
+} 
