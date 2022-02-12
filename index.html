@@ -38,18 +38,18 @@
         <div class="cantidad-dinero">
           <label for="bill"> Bill</label>
           <i class="fa-solid fa-dollar-sign billete icono-ingreso"></i>
-          <input class="refresco" type="text" id="bill" name="bill" placeholder="0" contenteditable="true">
+          <input class="refresco" type="text" id="bill" name="bill" placeholder="0" contenteditable="true" tabindex="1">
         </div>
 
         <div class="contenedor-interface">
           <label for="tip">Select Tip %</label>
           <div class="contenedor-botonera">
-            <button type="button" class="interface__boton refresco" > 5% </button>
-            <button type="button" class="interface__boton refresco"> 10% </button>
-            <button type="button" class="interface__boton refresco"> 15% </button>
-            <button type="button" class="interface__boton refresco"> 25% </button>
-            <button type="button" class="interface__boton refresco"> 50% </button>
-            <button type="button" class="interface__boton boton-custom refresco"> Custom </button>
+            <button type="button" class="interface__boton refresco" tabindex="0"  > 5% </button>
+            <button type="button" class="interface__boton refresco" tabindex="0"> 10% </button>
+            <button type="button" class="interface__boton refresco"tabindex="0"> 15% </button>
+            <button type="button" class="interface__boton refresco"tabindex="0"> 25% </button>
+            <button type="button" class="interface__boton refresco"tabindex="0"> 50% </button>
+            <button type="button" class="interface__boton boton-custom refresco"tabindex="0"> Custom </button>
 
           </div>
 
@@ -58,9 +58,10 @@
         </div>
 
         <div class="contenedor-personas">
+          <div class="notificacion-personas invisible">Can't be zero</div>
           <label for="personas">Number of people</label>
           <i class="fa-solid fa-user icono-ingreso personaIcono"></i>
-          <input class="refresco" type="text" id="personas" name="personas" placeholder="0">
+          <input class="refresco" type="text" id="personas" name="personas" placeholder="0" tabindex="0" onfocus="this.value = this.value;" >
         </div>
 
       </div>

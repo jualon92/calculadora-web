@@ -89,11 +89,12 @@ label{
 input{
     font-size: 24px;
     background-color:   #F3F8FB;
-    border-radius:3px;
+    border-radius:6px;
      border:solid  #F3F7F8;
     padding:10px; 
-    direction: rtl; 
-   
+    /*usar rtl es mala idea salvo que se busque escribir en arabe*/
+   /* direction: rtl;  */ 
+   text-align: right;
 }
 
 .contenedor-personas{
@@ -103,6 +104,21 @@ input{
 
 }
 
+.notificacion-personas{
+    color:#E18571;
+    position: absolute;
+    margin-left: 24%;
+}
+.visible{
+    opacity:1;
+}
+
+.invisible{
+    opacity:0;
+}
+.advertencia-personas{
+    border-color:#E18571!important;
+}
 .hola .hola{
 
 }
@@ -197,7 +213,7 @@ input{
  
 .reset{
     align-self: center;
-    transform: translateY(35px);
+    transform: translateY(45px);
     background-color: #0C686D;
     width: 100%;
     padding:15px;
@@ -241,13 +257,14 @@ input{
     background-color: #2AA69B!important;
     transform: translateY(3px);
     box-shadow: 0 4px #666;
+    color: #00494d!important; 
 }
-
+/*
 .reset:active{
     background-color: #2AA69B!important;
     
     box-shadow: 0 4px #666;
-}
+}*/
 
 
 @media (max-width:426px){
@@ -310,3 +327,29 @@ input{
 
      
 } 
+
+
+#bill:focus, #personas:focus{
+    border-color:#5BAA9F;
+    outline: none  ;
+} 
+
+input{
+    color: #00494d!important; 
+}
+/*
+button:active{
+    background-color: #9FE8DF;
+}*/
+
+
+.reset-activo{
+    background-color: #26C2AD!important;
+    box-shadow: 0 4px #666;
+}
+
+.reset:active{
+    background-color: #9FE8DF;
+}
+
+ 
