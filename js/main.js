@@ -21,7 +21,7 @@ const datoSinIngresar = () => (inputPersonas.value == false || inputBill.value =
 
 const getTotal = (valor, personas, tip) =>  ((valor / personas) + (tip)).toFixed(2)
 
-const getAmount = (valor, personas, tip) => parseInt((valor * tip / 100) / personas)
+const getAmount = (valor, personas, tip) => parseFloat((valor * tip / 100) / personas).toFixed(2)
 
 const getDisplay = (ele) => ele.value !== "" ? parseFloat(ele.value).toFixed(2) : 0.00
 
