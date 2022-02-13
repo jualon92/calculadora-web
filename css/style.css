@@ -359,6 +359,11 @@ button:active{
 } 
 
 
+@media screen and (min-width:1440px){
+    .notificacion-personas{
+        margin-left: 16%;
+    }
+}
 
 @media (min-width:1920px)  and  (max-width:2100px){ /*laptop alta res*/
     .notificacion-personas{

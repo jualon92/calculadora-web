@@ -1,4 +1,3 @@
-
 console.warn("iniciado")
 
 
@@ -12,7 +11,7 @@ const botonReset = document.querySelector(".reset")
 const notificacionPersonas = document.querySelector(".notificacion-personas")
 const botonCustom = document.querySelector(".custom")
 const contenedorCustom = document.querySelector(".contenedor-custom")
- 
+let eleccionPorcentaje = 0
 /*
 let valorOperacion = 0 // rever, podrian utilizarse funciones puras que retorn el valor y luego pasarse a html. sin necesidad de asignarlo ?
 let numeroPersonas = 0
@@ -107,6 +106,7 @@ document.querySelector(".reset").addEventListener("click", e => {
         totalNumero.innerHTML = 0
         inputBill.value = 0
         inputPersonas.value = 0
+        eleccionPorcentaje = 0
         botonReset.classList.remove("reset-activo")
         botonReset.disabled = true
         apagarBotones()
@@ -135,4 +135,3 @@ botonCustom.addEventListener("click", e => {
     eleccionPorcentaje = 0
     setTablero()
 })
-

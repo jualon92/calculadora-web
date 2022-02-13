@@ -32,7 +32,7 @@ HTML/CSS/Vanilla JS
 ### Que aprendi
 Flex es muy comodo para organizar elementos. Position absolute permite sacar del flujo elementos, util para iconos. Transform:translate(x,y)  
 
-JS : no repetir logica, funciones puras facilitan legibilidad, no abusar if, operador ternario,  arrow functions, funciones de orden superior (some)
+JS : no repetir logica, delegar responsabilidad en funciones helper, operador ternario,  arrow functions, funciones de orden superior
 
 
 ### Recursos utiles
