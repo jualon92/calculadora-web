@@ -37,8 +37,8 @@
 
         <div class="cantidad-dinero">
           <label for="bill"> Bill</label>
-          <i class="fa-solid fa-dollar-sign billete icono-ingreso"></i>
-          <input class="refresco" type="number" id="bill" name="bill" placeholder="0" contenteditable="true"
+          <i class="fa-solid fa-dollar-sign billete icono-ingreso" ></i>
+          <input class="refresco" type="number"   id="bill" name="bill" placeholder="0" contenteditable="true"   maxlength="8" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
             tabindex="1">
         </div>
  
@@ -63,7 +63,7 @@
           <div class="notificacion-personas invisible">Can't be zero</div>
           <label for="personas">Number of people</label>
           <i class="fa-solid fa-user icono-ingreso personaIcono"></i>
-          <input class="refresco" type="number" id="personas" name="personas" placeholder="0" tabindex="0"
+          <input class="refresco" type="number" id="personas" name="personas" placeholder="0" tabindex="0" 
             onfocus="this.value = this.value;">
         </div>
 
