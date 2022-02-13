@@ -10,6 +10,9 @@ const tipAmount = document.querySelector(".tip__number")
 const totalNumero = document.querySelector(".total__numero")
 const botonReset = document.querySelector(".reset")
 const notificacionPersonas = document.querySelector(".notificacion-personas")
+const botonCustom = document.querySelector(".custom")
+const contenedorCustom = document.querySelector(".contenedor-custom")
+ 
 /*
 let valorOperacion = 0 // rever, podrian utilizarse funciones puras que retorn el valor y luego pasarse a html. sin necesidad de asignarlo ?
 let numeroPersonas = 0
@@ -19,7 +22,7 @@ let bandera = true
 */
 const datoSinIngresar = () => (inputPersonas.value == false || inputBill.value == false || !hayBotonActivo())   // si no hay ingreso en input, o en calculo, o boton activo
 
-const getTotal = (valor, personas, tip) =>  ((valor / personas) + (tip)).toFixed(2)
+const getTotal = (valor, personas, tip) => ((valor / personas) + (tip)).toFixed(2)
 
 const getAmount = (valor, personas, tip) => parseFloat((valor * tip / 100) / personas).toFixed(2)
 
@@ -61,7 +64,10 @@ for (const input of inputsPorcentajes) {
         setTablero() //necesito  para  registrar evento click, porque boton evento input no hace nada.
     })
 
+
+
 }
+
 
 
 function apagarBotones() { //podria ser forEach , const a rrow
@@ -82,13 +88,13 @@ for (const input of inputsCalculo) { //al detectar entrada input se actualizan l
 
 
 inputPersonas.addEventListener("input", e => { //si input personas se vuelve 0 deberia mostrar html advertencia
-    if (inputPersonas.value == false){ // si valor es falsy, 0, ""
+    if (inputPersonas.value == false) { // si valor es falsy, 0, ""
         inputPersonas.classList.add("advertencia-personas") //coloreo border
-        notificacionPersonas.classList.replace("invisible", "visible" )
+        notificacionPersonas.classList.replace("invisible", "visible")
 
-    }else{
+    } else {
         inputPersonas.classList.remove("advertencia-personas")
-        notificacionPersonas.classList.add("visible","invisible")
+        notificacionPersonas.classList.add("visible", "invisible")
     }
 })
 
@@ -108,3 +114,25 @@ document.querySelector(".reset").addEventListener("click", e => {
 
 
 })
+
+botonCustom.addEventListener("click", e => {
+
+
+    apagarBotones() //desactivar los otros botones
+
+
+    contenedorCustom.innerHTML = '<input type="text" class="custom-nuevo refresco">'
+    document.querySelector(".custom-nuevo").addEventListener("input", e => {
+        botonCustom.classList.add("activo")
+        console.log("input detectado")
+        eleccionPorcentaje = document.querySelector(".custom-nuevo").value || 0
+        console.log(eleccionPorcentaje)
+        //mantener boton seleccionado , permanencia
+        //    apagarBotones() //desactivar los otros botones
+        // input.classList.add("activo")
+        setTablero() //necesito  para  registrar evento click, porque boton evento input no hace nada.
+    })
+    eleccionPorcentaje = 0
+    setTablero()
+})
+

@@ -268,7 +268,7 @@ input{
 
  
 
-#bill:focus, #personas:focus{
+#bill:focus, #personas:focus, .custom-nuevo:focus{
     border-color:#5BAA9F;
     outline: none  ;
 } 
@@ -371,4 +371,10 @@ button:active{
     .contenedor-botonera{
         column-gap: 48px;
     }
+}
+
+
+.custom-nuevo{
+    height: 15px;
+    width: 75px;
 }
