@@ -31,19 +31,30 @@
   </div>
 
   <section>
-
+ 
     <div class="contenedor-calculadora">
+       
+
       <div class="contenedor-datos">
+         
+        <div class="switch">
+          <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox"  >
+          <label for="language-toggle"></label>
+          <span class="on esp idioma" >ENG</span>
+          <span class="off eng idioma">ESP</span>
+        </div>
 
         <div class="cantidad-dinero">
-          <label for="bill"> Bill</label>
-          <i class="fa-solid fa-dollar-sign billete icono-ingreso" ></i>
-          <input class="refresco" type="number"   id="bill" name="bill" placeholder="0" contenteditable="true"   maxlength="8" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          <label for="bill" class="label-bill"> Bill</label>
+          <i class="fa-solid fa-dollar-sign billete icono-ingreso"></i>
+          <input class="refresco" type="number" id="bill" name="bill" placeholder="0" contenteditable="true"
+            maxlength="8"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
             tabindex="1">
         </div>
- 
+
         <div class="contenedor-interface">
-          <label for="tip">Select Tip %</label>
+          <label for="tip" class="label-tip">Select Tip %</label>
           <div class="contenedor-botonera">
             <button type="button" class="interface__boton refresco" tabindex="0"> 5% </button>
             <button type="button" class="interface__boton refresco" tabindex="0"> 10% </button>
@@ -54,16 +65,16 @@
               <button type="button" class="interface__boton  custom refresco" tabindex="0"> Custom </button>
             </div>
           </div>
-  
+
 
 
         </div>
 
         <div class="contenedor-personas">
           <div class="notificacion-personas invisible">Can't be zero</div>
-          <label for="personas">Number of people</label>
+          <label for="personas" class="label-personas">Number of people</label>
           <i class="fa-solid fa-user icono-ingreso personaIcono"></i>
-          <input class="refresco" type="number" id="personas" name="personas" placeholder="0" tabindex="0" 
+          <input class="refresco" type="number" id="personas" name="personas" placeholder="0" tabindex="0"
             onfocus="this.value = this.value;">
         </div>
 
@@ -72,10 +83,12 @@
       <div class="contenedor-resumen">
 
         <div class="cantidad">
-          <div class="cantidad__contenido  ">
-            Tip Amount
+          <div class="monto">
+            <div class="cantidad__contenido ">Tip Amount</div>
             <div class="persona">/ person</div>
           </div>
+        
+
 
           <div class="cantidad__monto number"> <i class="fa-solid fa-dollar-sign billete-num"></i> <span
               class="tip__number"> 0.00</span>
@@ -84,8 +97,8 @@
 
         <div class="total">
           <div class="total__texto">
-            <div>Total </div>
-            <div class="persona"> / person</div>
+            <div class>Total </div>
+            <div class="persona persona2">/ person</div>
 
 
           </div>

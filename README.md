@@ -11,8 +11,7 @@ Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor]
 
  
 
-## Lista de Tareas pendientes
-- Falta implementar custom
+## Lista de Tareas pendientes 
 - Estaria bueno utilizar nombres de clase basado en BEM, y utilizar Sass
 
 
@@ -32,7 +31,7 @@ HTML/CSS/Vanilla JS
 ### Que aprendi
 Flex es muy comodo para organizar elementos. Position absolute permite sacar del flujo elementos, util para iconos. Transform:translate(x,y)  
 
-JS : no repetir logica, delegar responsabilidad en funciones helper, operador ternario,  arrow functions, funciones de orden superior
+JS : no repetir logica, delegar responsabilidad en funciones auxiliares, operador ternario,  arrow functions, funciones de orden superior
 
 
 ### Recursos utiles

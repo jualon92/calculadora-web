@@ -8,9 +8,60 @@ const inputsCalculo = document.querySelectorAll(".refresco")
 const tipAmount = document.querySelector(".tip__number")
 const totalNumero = document.querySelector(".total__numero")
 const botonReset = document.querySelector(".reset")
-const notificacionPersonas = document.querySelector(".notificacion-personas")
+
 const botonCustom = document.querySelector(".custom")
 const contenedorCustom = document.querySelector(".contenedor-custom")
+const toggleLeng = document.querySelector(".toggle-leng")
+
+//modificables segun sel lenguaje
+const billLabel = document.querySelector(".label-bill")  
+const tipLabel = document.querySelector(".label-tip")
+const personasLabel = document.querySelector(".label-personas")
+const notificacionPersonas = document.querySelector(".notificacion-personas")
+const cantidadTip = document.querySelector(".cantidad__contenido")
+const persona = document.querySelector(".persona")
+const persona2 = document.querySelector(".persona2")
+const tipTotal = document.querySelector(".tip__number")
+const totalTexto = document.querySelector(".total__texto") 
+
+const inputsBilingues = [ //podria hacerse un for each de labels pero hay divs, hacer todo label no me gusta tanto
+    billLabel, 
+    tipLabel, 
+    personasLabel, 
+    notificacionPersonas, 
+    cantidadTip, 
+    persona, 
+    persona2
+]
+
+
+
+/*const labels = document.querySelectorAll("label") */
+const diccioReverso = { //podria exportarse
+    "Bill": "Cuenta",
+    "Cuenta" : "Bill",
+    "Tip Amount" : "Propina",
+    "Propina" : "Tip Amount",
+     "/ persona" : "/ person",
+     "/ person" : "/ persona",
+     "Total\n/ persona" : "Total\n/ person",
+     "Total\n/ person" :  "Total\n/ persona",
+    "Elegir propina %" :  "Select Tip %",
+    "Select Tip %" :  "Elegir propina %",
+    "Can't be zero" : "No puede ser 0",
+   "No puede ser 0" :   "Can't be zero",
+   "Number of people" : "Numero de Personas",
+   "Numero de Personas" : "Number of people",
+
+}
+
+document.querySelector("#language-toggle").addEventListener("input", e => {
+    
+     inputsBilingues.forEach( ele => {
+        ele.innerText = diccioReverso[ele.innerText]
+    }); 
+});
+
 let eleccionPorcentaje = 0
 /*
 let valorOperacion = 0 // rever, podrian utilizarse funciones puras que retorn el valor y luego pasarse a html. sin necesidad de asignarlo ?
@@ -19,6 +70,23 @@ let eleccionPorcentaje = 0
  
 let bandera = true
 */
+
+ 
+/*
+toggleLeng.addEventListener("click", e => {
+    console.log("fui presionado")
+    inputsBilingues.forEach( ele => {
+        ele.innerText = diccioReverso[ele.innerText]
+    });*/
+   /*
+    const ele = document.querySelector(".label-bill")
+ 
+    const palBusq = ele.innerText
+    const palTraducida = diccioReverso[palBusq]
+    ele.innerText = palTraducida*/
+
+ 
+
 const datoSinIngresar = () => (inputPersonas.value == false || inputBill.value == false || !hayBotonActivo())   // si no hay ingreso en input, o en calculo, o boton activo
 
 const getTotal = (valor, personas, tip) => ((valor / personas) + (tip)).toFixed(2)
