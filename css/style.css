@@ -309,15 +309,31 @@ button:active{
         padding:0;
     }
 
+    
+    
     .contenedor-interface{
         height: 170px;
     }
-
+    .notificacion-personas{
+        margin-left:49%;
+    }
     .contenedor-botonera{
         justify-content: center; /*me gusta como queda*/
         row-gap: 10px
     }
+    .billete-num{
+        margin-right: 7px;
+    }
+    .total__texto {
+        width: 0px;
+    }
+    .total__texto,.cantidad__contenido{
+        width: 0;
+    }
 
+    .cantidad__monto, .total__monto, .billete-num {
+        font-size: 25px;
+    }
     .contenedor-titulo{
         margin-bottom: 10%;
     }
@@ -338,13 +354,35 @@ button:active{
     }
 }
 
-@media (max-width:320){
+@media (max-width:330px){
     .contenedor-calculadora{
-        padding:30px;
+        padding:20px;
+    }
+
+    .billete-num{
+        font-size: 20px!important;
+        margin-right: 10px;
+    }
+
+    .cantidad__monto, .total__monto {
+        font-size: 20px;
+    }
+    .notificacion-personas{
+        margin-left: -0.5%;
+        margin-top: 28%;
+    }
+
+    .number {
+        color: #2AA69B;
+        transform: translateY(0px);
     }
 }
 
-
+@media screen and (max-width:2560px){
+    .contenedor-calculadora{
+        min-height: 650px;
+    }
+}
 @media screen and (width:1024px){
     .contenedor-datos,.contenedor-resumen{
         padding:20px;
@@ -383,3 +421,4 @@ button:active{
     height: 15px;
     width: 75px;
 }
+
