@@ -302,8 +302,12 @@ button:active{
         margin:0;
         flex-direction:column;
         padding:40px;
+
     }  
 
+    .cantidad{
+        margin-top:0px!important
+    }
     .contenedor-datos{
         width: auto;
         padding:0;
@@ -332,10 +336,13 @@ button:active{
     .total__texto {
         width: 0px;
     }
-    .total__texto,.cantidad__contenido{
+    .total__texto{
         width: 0;
     }
 
+    .cantidad__contenido{
+        width: 110;
+    }
     .cantidad__monto, .total__monto, .billete-num {
         font-size: 25px;
     }
@@ -345,9 +352,10 @@ button:active{
     .contenedor-resumen{
         width: auto;
       padding: 0;
-      margin-top: 40px;
+      margin-top: 40px; 
  
-      padding: 0 20px 0 20px;
+      padding: 20px;
+      padding-top: 40px;
     }
 
     .reset{
@@ -357,6 +365,7 @@ button:active{
     .interface-boton{
         width: 125px;
     }
+  
 }
 
 .contenedor-datos,.contenedor-resumen{
@@ -401,8 +410,11 @@ button:active{
     .contenedor-calculadora{
         padding:6% 4% 6% 4%;
         margin: 6% ;
+        
     }
-
+    .contenedor-datos{
+        gap:50px;
+    }
      
 } 
  
