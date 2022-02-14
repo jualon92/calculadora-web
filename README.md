@@ -36,7 +36,7 @@ Flex es comodo para organizar elementos y mantener un diseño responsive.
 
 JS : no repetir logica, delegar responsabilidad en funciones auxiliares.
 
-No adelantarme y tomarme el tiempo en plantear soluciones posible , ventajas y desv de cada una. Comenzar con una prueba  lo mas pequeña posible
+Tomarme el tiempo en plantear soluciones posible , ventajas y desv de cada una. Comenzar con una prueba  lo mas pequeña posible
 ej: probar cambiar un solo input de un idioma a otro en vez de comenzar con un diccionario
 
 
