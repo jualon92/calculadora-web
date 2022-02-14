@@ -31,7 +31,8 @@ const inputsBilingues = [ //podria hacerse un for each de labels pero hay divs, 
     notificacionPersonas, 
     cantidadTip, 
     persona, 
-    persona2
+    persona2,
+    botonReset
 ]
 
 
@@ -52,6 +53,8 @@ const diccioReverso = { //podria exportarse
    "No puede ser 0" :   "Can't be zero",
    "Number of people" : "Numero de Personas",
    "Numero de Personas" : "Number of people",
+   "RESET" : "REINICIAR",
+   "REINICIAR" : "RESET",
 
 }
 
