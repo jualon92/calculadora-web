@@ -4,34 +4,40 @@ Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor]
  
 
 ## Imagen
- ![Webp net-resizeimage (2)](https://user-images.githubusercontent.com/46230600/153524953-1c81ca13-8ee8-4936-ab3f-5547e727bdc5.png)
+![Webp net-resizeimage (3)](https://user-images.githubusercontent.com/46230600/153781868-8968d0ec-ccbc-4e44-8376-0e8436fbd1c6.png)
 
 
-![Webp net-resizeimage](https://user-images.githubusercontent.com/46230600/153524850-5463b999-0de6-4043-820b-ec7c5ba343c3.png)
+
+![Webp net-resizeimage (4)](https://user-images.githubusercontent.com/46230600/153781916-a00fa435-0184-40a5-a4c7-e4ec08e51b44.png)
+
 
  
 
 ## Lista de Tareas pendientes 
-- Estaria bueno utilizar nombres de clase basado en BEM, y utilizar Sass
-
+- modo noche
+- Estaria bueno utilizar nombres de clase basado en BEM e  implementar Sass
+ 
 
 ## Proceso
-Para los contenedores utilice flex box, margin, transform:translate(x,y) y position absolute para iconos.
+- si no son agregados monto, personas y porcentaje => display sigue en 0.00 para evitar resultados dudosos
+- Agregar 0 personas avisa que es mala idea y lo ignora
+- Limite en monto de 9 digitos para evitar malentendidos
+- utilizar  switch de lenguaje cambia elemento.innerText segun valores de un diccionario reverso
+- elegi utilizar flex porque  facilita que se mantengan proporciones en diferentes resoluciones.
 
 
-Me parece mejor que la cuenta se haga cuando ya fueron ingresados los tres valores. Se verifica que los input.value no sean falsy y este activo un boton antes de mostrar datos
-
-Borrar datos ingresados de inputs provoca que ecuacion devuelve NaN (se utiliza string vacio) => funcion getDisplay() devuelve 0 si input.value es string vacio.
-
-
+ 
 ### Herramientas
 HTML/CSS/Vanilla JS
 
  
 ### Que aprendi
-Flex es muy comodo para organizar elementos. Position absolute permite sacar del flujo elementos, util para iconos. Transform:translate(x,y)  
+Flex es comodo para organizar elementos y mantener un diseño responsive.
 
-JS : no repetir logica, delegar responsabilidad en funciones auxiliares, operador ternario,  arrow functions, funciones de orden superior
+JS : no repetir logica, delegar responsabilidad en funciones auxiliares.
+
+Tomarme el tiempo en plantear soluciones posible , ventajas y desv de cada una. Comenzar con una prueba  lo mas pequeña posible
+ej: probar cambiar un solo input de un idioma a otro en vez de comenzar con un diccionario
 
 
 ### Recursos utiles
