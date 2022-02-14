@@ -105,13 +105,13 @@ const setTablero = () => {
     if (!datoSinIngresar()) { // si los datos no estan vacios
         console.log(inputPersonas.value)
         tipAmount.innerHTML = getAmount(getDisplay(inputBill), getDisplay(inputPersonas), eleccionPorcentaje)
-        totalNumero.innerHTML = getTotal(getDisplay(inputBill), getDisplay(inputPersonas), parseInt(tipAmount.innerHTML))
+        totalNumero.innerHTML = getTotal(getDisplay(inputBill), getDisplay(inputPersonas), parseFloat(tipAmount.innerHTML))
         botonReset.classList.add("reset-activo")
         botonReset.disabled = false
 
     } else { // si falta un dato,resultados deberian ser 0 para no confundir
-        tipAmount.innerHTML = 0
-        totalNumero.innerHTML = 0
+        tipAmount.innerHTML = "0.00"
+        totalNumero.innerHTML = "0.00"
 
 
         botonReset.classList.remove("reset-activo")
@@ -127,7 +127,7 @@ const setTablero = () => {
 for (const input of inputsPorcentajes) {
     input.addEventListener("click", e => {
 
-        eleccionPorcentaje = parseInt(input.innerText.split("%")[0])
+        eleccionPorcentaje = parseFloat(input.innerText.split("%")[0])
         //mantener boton seleccionado , permanencia
         apagarBotones() //desactivar los otros botones
         input.classList.add("activo")
@@ -173,11 +173,11 @@ inputPersonas.addEventListener("input", e => { //si input personas se vuelve 0 d
 document.querySelector(".reset").addEventListener("click", e => {
 
     if (botonReset.classList.contains("reset-activo")) {
-        tipAmount.innerHTML = 0
-        totalNumero.innerHTML = 0
-        inputBill.value = 0
-        inputPersonas.value = 0
-        eleccionPorcentaje = 0
+        tipAmount.innerHTML = 0.00
+        totalNumero.innerHTML =  0.00
+        inputBill.value =  0.00
+        inputPersonas.value =  0.00
+        eleccionPorcentaje =  0.00
         botonReset.classList.remove("reset-activo")
         botonReset.disabled = true
         apagarBotones()
