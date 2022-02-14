@@ -4,7 +4,8 @@ Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor]
  
 
 ## Imagen
-![Webp net-resizeimage (3)](https://user-images.githubusercontent.com/46230600/153781868-8968d0ec-ccbc-4e44-8376-0e8436fbd1c6.png)
+ ![Webp net-resizeimage (5)](https://user-images.githubusercontent.com/46230600/153784103-bde482fe-a772-4a75-b617-ad50fd113a97.png)
+
 
 
 
