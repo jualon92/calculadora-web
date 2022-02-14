@@ -362,6 +362,9 @@ button:active{
     }
 }
 
+.contenedor-datos,.contenedor-resumen{
+    padding-bottom: 0;
+}
 @media (max-width:330px){
     .contenedor-calculadora{
         padding:20px;
@@ -389,9 +392,9 @@ button:active{
 }
 
 @media screen and (max-width:2560px){
-    .contenedor-calculadora{
+    /*.contenedor-calculadora{
         min-height: 650px;
-    }
+    }*/
 }
 @media screen and (width:1024px){
     .contenedor-datos,.contenedor-resumen{
@@ -400,16 +403,24 @@ button:active{
 
     .contenedor-calculadora{
         padding:6% 4% 6% 4%;
-        margin: 6%;
+        margin: 6% ;
     }
 
      
 } 
-
-
+ 
+@media screen and (min-width:2200px){
+    .contenedor-calculadora{
+        margin: 6% 17% 10% 17%!important;
+    }
+}
 @media screen and (min-width:1440px){
     .notificacion-personas{
         margin-left: 16%;
+    }
+
+    .contenedor-calculadora{
+        margin: 6% 17% 10% 17%;
     }
 }
 
@@ -424,6 +435,8 @@ button:active{
     .contenedor-botonera{
         column-gap: 48px;
     }
+
+     
 }
 
 
