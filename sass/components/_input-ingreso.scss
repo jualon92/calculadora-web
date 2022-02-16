@@ -1,0 +1,22 @@
+.input__ingreso {
+    color: #00494d !important;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: #f3f8fb;
+    border-radius: 6px;
+    border: solid #f3f7f8;
+    padding: 10px;
+    /*usar rtl es mala idea salvo que se busque escribir en arabe*/
+    /* direction: rtl;  */
+    text-align: right;
+
+    &:focus {
+        border-color: #5baa9f;
+        outline: none;
+    }
+
+    &::placeholder{
+        color:#A1B6B7;
+        font-weight: 700;
+    }
+}

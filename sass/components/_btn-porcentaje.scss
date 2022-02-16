@@ -1,0 +1,55 @@
+
+.botonera-porcentajes {
+    column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+
+    &__btn {
+        width: 115px !important;
+        height: 45px;
+        width: 100px;
+        background-color: hsl(183, 100%, 15%);
+        font-weight: 700;
+        font-size: large;
+        color: white;
+        border-radius: 6px;
+        border: solid #134144;
+
+        &--active {
+            background-color: #2aa69b;
+            transform: translateY(3px);
+            box-shadow: 0 4px #666;
+            color: #00494d;
+        }
+    }
+
+    &__btn-custom {
+        background-color: #f3f8fb;
+        color: #5a7677;
+        border-color: #f1f5f6;
+    }
+
+    &__custom-input {
+        height: 39px;
+        width: 109px;
+
+        font-weight: 700; /*podria ser en comun con todos los inputs, clase */
+        font-size: large;
+        color: #00494d !important;
+        border-radius: 6px;
+        /* border: solid #134144; */
+        background-color: #f3f8fb;
+        border-color: transparent;
+        text-align: right;
+
+        &:focus {
+            border-color: #5baa9f !important; //logica repetida
+            outline: none;
+            border: solid;
+        }
+    }
+}

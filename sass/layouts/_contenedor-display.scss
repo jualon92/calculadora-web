@@ -1,0 +1,33 @@
+
+.contenedor-resumen {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 40px;
+    gap: 60px;
+    background-color: #00474b;
+    color: white;
+    border-radius: 20px;
+    flex: 1;
+}
+
+
+ 
+
+.cantidad {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px; /*segun ej*/
+
+    &__contenido {
+        width: 100px;
+    }
+
+    &__numero {
+        font-size: 40px;
+        color: #2aa69b;
+        transform: translateY(-5px);
+        font-size: 40px;
+    }
+}
+

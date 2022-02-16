@@ -6,11 +6,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="css/style.css">
+  <!--<link rel="stylesheet" href="css/style.css">-->
+  <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+
   <script src="https://kit.fontawesome.com/b70609df13.js" crossorigin="anonymous"></script>
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
@@ -26,92 +31,114 @@
 
 <body>
   <div class="contenedor-titulo">
-    <div class="titulo">SPLI</div>
-    <div class="titulo">TTER</div>
+
+    <div class="contenedor-titulo__nombre">SPLI</div>
+    <div class="contenedor-titulo__nombre">TTER</div>
+
   </div>
 
   <section>
- 
+
     <div class="contenedor-calculadora">
-       
+
+
+      <div class="switch">
+        <input id="language-toggle" class="switch__check-toggle  
+        switch__heck-toggle-round-flat check-toggle check-toggle-round-flat" type="checkbox">
+        <label id="toggle-leng" for="language-toggle"></label>
+        <span class="on esp idioma switch__on switch__opcion">ENG</span>
+        <span class="off eng idioma switch__off switch__opcion">ESP</span>
+      </div>
 
       <div class="contenedor-datos">
-         
-        <div class="switch">
-          <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox"  >
-          <label for="language-toggle"></label>
-          <span class="on esp idioma" >ENG</span>
-          <span class="off eng idioma">ESP</span>
-        </div>
 
-        <div class="cantidad-dinero">
-          <label for="bill" class="label-bill"> Bill</label>
-          <i class="fa-solid fa-dollar-sign billete icono-ingreso"></i>
-          <input class="refresco" type="number" id="bill" name="bill" placeholder="0" contenteditable="true"
-            maxlength="6"
+
+
+        <div class="monto">
+          <label for="bill"   class="monto__label-bill contenedor-calculadora__label"> Bill</label>
+          <i class="fa-solid fa-dollar-sign   icono-ingreso monto__billete-icono"></i>
+          <input class="refresco monto__input input__ingreso js-bill" type="number" id="bill" name="bill" placeholder="0"
+            contenteditable="true" maxlength="6"
             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
             tabindex="1">
         </div>
 
-        <div class="contenedor-interface">
-          <label for="tip" class="label-tip">Select Tip %</label>
-          <div class="contenedor-botonera">
-            <button type="button" class="interface__boton refresco" tabindex="0"> 5% </button>
-            <button type="button" class="interface__boton refresco" tabindex="0"> 10% </button>
-            <button type="button" class="interface__boton refresco" tabindex="0"> 15% </button>
-            <button type="button" class="interface__boton refresco" tabindex="0"> 25% </button>
-            <button type="button" class="interface__boton refresco" tabindex="0"> 50% </button>
-            <div class="contenedor-custom">
-              <button type="button" class="interface__boton  custom refresco" tabindex="0"> Custom </button>
+
+
+
+        <div class="interface">
+          <label for="tip" class="js-tip interface__label-tip  contenedor-calculadora__label  " id="tip">Select Tip %</label>
+          <div class="botonera-porcentajes ">
+            <button type="button" class="botonera-porcentajes__btn  refresco   js-botonPercent" tabindex="0"> 5% </button>
+            <button type="button" class="botonera-porcentajes__btn  refresco  js-botonPercent" tabindex="0"> 10% </button>
+            <button type="button" class="botonera-porcentajes__btn  refresco  js-botonPercent" tabindex="0"> 15% </button>
+            <button type="button" class="botonera-porcentajes__btn  refresco  js-botonPercent" tabindex="0"> 25% </button>
+            <button type="button" class="botonera-porcentajes__btn  refresco   js-botonPercent " tabindex="0"> 50% </button>
+            <div  id="botonera-porcentajes__custom"> <!--deberia ser id-->
+              <button type="button" class="botonera-porcentajes__btn botonera-porcentajes__custom   refresco"
+                tabindex="0" id="custom"> Custom </button>
             </div>
           </div>
-
-
-
         </div>
+
+
 
         <div class="contenedor-personas">
-          <div class="notificacion-personas invisible">Can't be zero</div>
-          <label for="personas" class="label-personas">Number of people</label>
-          <i class="fa-solid fa-user icono-ingreso personaIcono"></i>
-          <input class="refresco" type="number" id="personas" name="personas" placeholder="0" tabindex="0"
-            onfocus="this.value = this.value;">
+          <div class="js-notif contenedor-personas__notif invisible" >Can't be zero</div>
+          <label for="personas" class="contenedor-personas__npersonas  contenedor-calculadora__label " id="label-personas">Number of people</label>
+          <i class="fa-solid fa-user icono-ingreso contenedor-personas__personaIcono"></i>
+          <input class="refresco input__ingreso js-personas" type="number" id="personas" name="personas" placeholder="0"
+            tabindex="0" onfocus="this.value = this.value;">
         </div>
+
 
       </div>
 
+
+
+
       <div class="contenedor-resumen">
 
+
         <div class="cantidad">
-          <div class="monto">
-            <div class="cantidad__contenido ">Tip Amount</div>
-            <div class="persona">/ person</div>
-          </div>
-        
-
-
-          <div class="cantidad__monto number"> <i class="fa-solid fa-dollar-sign billete-num"></i> <span
-              class="tip__number"> 0.00</span>
-          </div>
-        </div>
-
-        <div class="total">
-          <div class="total__texto">
-            <div class>Total </div>
-            <div class="persona persona2">/ person</div>
-
-
-          </div>
-
-          <div class="total__monto  number"> <i class="fa-solid fa-dollar-sign billete-num"></i>
-            <span class="total__numero">0.00 </span>
+          <div class="cantidad__monto descripcion">
+            <div id="tip__number" class="cantidad__contenido ">Tip Amount</div>
+            <div class="persona js-persona">/ person</div>
           </div>
 
 
+
+          <div class="cantidad__numero js-cnumero">
+            <i class="fa-solid fa-dollar-sign simbolo-moneda"></i> <span class="cantidad__numero  js-totalNumero" 
+            id="total__numero"> 0.00</span>
+          </div>
 
 
         </div>
-        <button class="reset" type="button">
+
+
+
+
+        <div class="cantidad">
+          <div class="cantidad__monto descripcion">
+            <div class="cantidad__contenido ">Total </div>
+            <div class="persona persona2 js-persona2  ">/ person</div>
+          </div>
+
+
+
+          <div class="cantidad__numero">
+            <i class="fa-solid fa-dollar-sign simbolo-moneda  "></i> <span class="cantidad__numero js-nroTotal" id="nroTotal"> 0.00</span>
+          </div>
+
+
+        </div>
+
+
+
+
+
+        <button class="reset" id="btnReset" type="button">
           RESET
         </button>
       </div>

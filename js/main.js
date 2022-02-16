@@ -1,28 +1,33 @@
 console.warn("iniciado")
 
 
-const inputBill = document.querySelector("#bill")
-const inputPersonas = document.querySelector("#personas")
-const inputsPorcentajes = document.querySelectorAll(".interface__boton")
+const inputBill = document.querySelector(".js-bill")
+const inputPersonas = document.querySelector(".js-personas")
+
+
+const inputsPorcentajes = document.querySelectorAll(".js-botonPercent")
 const inputsCalculo = document.querySelectorAll(".refresco")
-const tipAmount = document.querySelector(".tip__number")
-const totalNumero = document.querySelector(".total__numero")
-const botonReset = document.querySelector(".reset")
+const tipAmount = document.querySelector("#total__numero")
+const totalNumero = document.querySelector(".js-nroTotal ")
+const botonReset = document.querySelector("#btnReset")
 
-const botonCustom = document.querySelector(".custom")
-const contenedorCustom = document.querySelector(".contenedor-custom")
-const toggleLeng = document.querySelector(".toggle-leng")
 
-//modificables segun sel lenguaje
-const billLabel = document.querySelector(".label-bill")  
-const tipLabel = document.querySelector(".label-tip")
-const personasLabel = document.querySelector(".label-personas")
-const notificacionPersonas = document.querySelector(".notificacion-personas")
-const cantidadTip = document.querySelector(".cantidad__contenido")
-const persona = document.querySelector(".persona")
-const persona2 = document.querySelector(".persona2")
-const tipTotal = document.querySelector(".tip__number")
-const totalTexto = document.querySelector(".total__texto") 
+const botonCustom = document.querySelector("#custom")
+const contenedorCustom = document.querySelector("#botonera-porcentajes__custom") 
+const toggleLeng = document.querySelector("#toggle-leng")
+
+ 
+
+//para traduccion
+const billLabel = document.querySelector(".js-bill")  
+const tipLabel = document.querySelector(".js-tip")
+const personasLabel = document.querySelector("#label-personas")
+const notificacionPersonas = document.querySelector(".js-notif")
+const cantidadTip = document.querySelector("#tip__number")
+const persona = document.querySelector(".js-persona")
+const persona2 = document.querySelector(".js-persona2")
+const tipTotal = document.querySelector("#tip__number")
+const totalTexto = document.querySelector(".js-totalNumero") 
 
 const inputsBilingues = [ //podria hacerse un for each de labels pero hay divs, hacer todo label no me gusta tanto
     billLabel, 
@@ -36,9 +41,8 @@ const inputsBilingues = [ //podria hacerse un for each de labels pero hay divs, 
 ]
 
 
-
-/*const labels = document.querySelectorAll("label") */
-const diccioReverso = { //podria exportarse
+ 
+const diccioReverso = { //podria importarse
     "Bill": "Cuenta",
     "Cuenta" : "Bill",
     "Tip Amount" : "Propina",
@@ -66,31 +70,11 @@ document.querySelector("#language-toggle").addEventListener("input", e => {
 });
 
 let eleccionPorcentaje = 0
-/*
-let valorOperacion = 0 // rever, podrian utilizarse funciones puras que retorn el valor y luego pasarse a html. sin necesidad de asignarlo ?
-let numeroPersonas = 0
-let eleccionPorcentaje = 0
- 
-let bandera = true
-*/
-
- 
-/*
-toggleLeng.addEventListener("click", e => {
-    console.log("fui presionado")
-    inputsBilingues.forEach( ele => {
-        ele.innerText = diccioReverso[ele.innerText]
-    });*/
-   /*
-    const ele = document.querySelector(".label-bill")
- 
-    const palBusq = ele.innerText
-    const palTraducida = diccioReverso[palBusq]
-    ele.innerText = palTraducida*/
-
  
 
-const datoSinIngresar = () => (inputPersonas.value == false || inputBill.value == false || !hayBotonActivo())   // si no hay ingreso en input, o en calculo, o boton activo
+
+///////F AUXILIARES
+const datoSinIngresar = () => (inputPersonas.value == false || inputBill.value == false || eleccionPorcentaje  == 0) // si no hay ingreso en input, o en calculo, o boton activo
 
 const getTotal = (valor, personas, tip) => ((valor / personas) + (tip)).toFixed(2)
 
@@ -99,9 +83,20 @@ const getAmount = (valor, personas, tip) => parseFloat((valor * tip / 100) / per
 const getDisplay = (ele) => ele.value !== "" ? parseFloat(ele.value).toFixed(2) : 0.00
 
 
-const hayBotonActivo = () => Array.from(inputsPorcentajes).some(b => b.classList.contains("activo"))  // si hay un boton con clase activo activo
+///puede buscarse que un boton tenga clase activo o no mediante some, 
+///pero con preguntar si eleccionPorcentaje fue asignado un nuevo valor es suficiente  
+///const hayBotonActivo = () => Array.from(inputsPorcentajes).some(b => b.classList.contains("botonera-porcentajes__btn--active"))    // si hay un boton con clase activo activo
 
-const setTablero = () => {
+
+
+
+
+
+
+
+
+ 
+const setTablero = () => { // si datos estan ingresados, setear displays con  cantidad, sino con 0.00
     if (!datoSinIngresar()) { // si los datos no estan vacios
         console.log(inputPersonas.value)
         tipAmount.innerHTML = getAmount(getDisplay(inputBill), getDisplay(inputPersonas), eleccionPorcentaje)
@@ -116,13 +111,11 @@ const setTablero = () => {
 
         botonReset.classList.remove("reset-activo")
         botonReset.disabled = true
+        console.log("no")
     }
 }
 
-
-//tema de botones clase de %
-
-
+ 
 
 for (const input of inputsPorcentajes) {
     input.addEventListener("click", e => {
@@ -130,7 +123,7 @@ for (const input of inputsPorcentajes) {
         eleccionPorcentaje = parseFloat(input.innerText.split("%")[0])
         //mantener boton seleccionado , permanencia
         apagarBotones() //desactivar los otros botones
-        input.classList.add("activo")
+        input.classList.add("botonera-porcentajes__btn--active")
         setTablero() //necesito  para  registrar evento click, porque boton evento input no hace nada.
     })
 
@@ -142,7 +135,7 @@ for (const input of inputsPorcentajes) {
 
 function apagarBotones() { //podria ser forEach , const a rrow
     for (const input of inputsPorcentajes) {
-        input.classList.remove("activo")
+        input.classList.remove("botonera-porcentajes__btn--active")
     }
 
 }
@@ -173,11 +166,11 @@ inputPersonas.addEventListener("input", e => { //si input personas se vuelve 0 d
 document.querySelector(".reset").addEventListener("click", e => {
 
     if (botonReset.classList.contains("reset-activo")) {
-        tipAmount.innerHTML = 0.00
-        totalNumero.innerHTML =  0.00
-        inputBill.value =  0.00
-        inputPersonas.value =  0.00
-        eleccionPorcentaje =  0.00
+        tipAmount.innerHTML = "0.00"
+        totalNumero.innerHTML =   "0.00"
+        inputBill.value =   ""
+        inputPersonas.value =   ""
+        eleccionPorcentaje =   0
         botonReset.classList.remove("reset-activo")
         botonReset.disabled = true
         apagarBotones()
@@ -185,24 +178,38 @@ document.querySelector(".reset").addEventListener("click", e => {
 
 
 })
-
-botonCustom.addEventListener("click", e => {
+ 
+botonCustom.addEventListener("click", e => { //al apretar caja custom
 
 
     apagarBotones() //desactivar los otros botones
 
-
-    contenedorCustom.innerHTML = '<input type="text" class="custom-nuevo refresco">'
-    document.querySelector(".custom-nuevo").addEventListener("input", e => {
-        botonCustom.classList.add("activo")
+    //nuevo input a aparecer
+    contenedorCustom.innerHTML = '<input type="text" class=" botonera-porcentajes__custom-input input-data refresco">'
+    let inputNuevo = document.querySelector(".botonera-porcentajes__custom-input")
+    
+    //agrego listener a nuevo input que recibe porcentaje custom
+    inputNuevo.addEventListener("input", e => { //al recibir input
+       
+        botonCustom.classList.add("botonera-porcentajes__btn--active")
         console.log("input detectado")
-        eleccionPorcentaje = document.querySelector(".custom-nuevo").value || 0
+        eleccionPorcentaje = document.querySelector(".botonera-porcentajes__custom-input").value || 0
+        
         console.log(eleccionPorcentaje)
         //mantener boton seleccionado , permanencia
         //    apagarBotones() //desactivar los otros botones
         // input.classList.add("activo")
-        setTablero() //necesito  para  registrar evento click, porque boton evento input no hace nada.
+        setTablero()  
     })
-    eleccionPorcentaje = 0
-    setTablero()
-})
+
+    inputNuevo.addEventListener("click", e =>{ // al ser clickeado, apaga los botones
+        apagarBotones()   
+    } )
+
+
+
+    eleccionPorcentaje = 0 // porcentaje vuelve a valor default al apretar custom box
+    setTablero() 
+}) 
+
+ 

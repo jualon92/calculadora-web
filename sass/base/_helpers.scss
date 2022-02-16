@@ -1,0 +1,44 @@
+ 
+ 
+.descripcion {
+    font-size: 17px;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+ 
+
+.persona {
+    position: absolute;
+    color: #6a9ea2;
+}
+
+.number {
+    color: #2aa69b;
+    transform: translateY(-5px);
+    font-size: 40px;
+}
+ 
+.monto {
+    display: flex;
+    flex-direction: column;
+    /*
+    &__billete-icono {
+        margin-left: 20px;
+        width: 10px;
+        color: hsl(184, 14%, 56%);
+        position: absolute;
+        transform: translateY(39px);
+    }*/
+
+    &__monto-input {
+    }
+}
+
+ 

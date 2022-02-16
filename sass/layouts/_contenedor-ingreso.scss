@@ -1,0 +1,42 @@
+ 
+.contenedor-datos {
+    /*  width: 50%;*/
+    width: 44%;
+    /*   border: solid rebeccapurple; */
+    /*padding: 50px;*/
+    padding: 10px 41px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+}
+ 
+
+.contenedor-personas {
+    display: flex;
+    flex-direction: column;
+    /* transform: translateY(10px); */
+
+    &__notif {
+        color: #e18571;
+        position: absolute;
+        margin-left: 24%;
+    }
+
+    &__notif {
+        color: #e18571;
+        position: absolute;
+        margin-left: 18%;
+    }
+
+    
+}
+.interface {
+    display: flex;
+    flex-direction: column;
+
+    &__label-tip {
+        margin-bottom: 8px;
+    }
+}
+ 
+ 
