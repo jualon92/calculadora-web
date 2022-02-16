@@ -12,8 +12,10 @@
     border-radius: 20px;
     flex: 1;
     @media (max-width: 427px) {
-        padding-top: 0px; // sin margenes en mobile salvo top
+      
         gap:30px;
+        padding:  25px;
+        padding-top: 0px; // sin margenes en mobile salvo top
     }
 
    
@@ -36,6 +38,16 @@
         color: #2aa69b;
         transform: translateY(-5px);
         font-size: 40px;
+        font-weight: bolder;
+        
+        @media (max-width: 427px) {
+            font-size: 32px; //evitar overflow
+            
+        }
     }
+
+    
+
+    
 }
 

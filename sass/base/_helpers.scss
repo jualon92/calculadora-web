@@ -1,7 +1,12 @@
  
  
 .descripcion {
-    font-size: 17px;
+    font-size: 1.063rem;
+
+    @media (max-width: 427px) {
+        font-size:0.9375rem;
+
+    }
 }
 
 .visible {
