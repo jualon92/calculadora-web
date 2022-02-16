@@ -52,4 +52,12 @@
             border: solid;
         }
     }
+
+    @media (max-width: 427px) {
+        justify-content: space-evenly; //separacion izq y derecha entre c/u
+        height: auto;
+        row-gap: 22px;
+
+    }
+    
 }

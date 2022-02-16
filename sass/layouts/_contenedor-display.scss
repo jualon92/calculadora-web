@@ -1,4 +1,6 @@
 
+//segundo contenedor display datos resultado
+
 .contenedor-resumen {
     display: flex;
     flex-direction: column;
@@ -9,6 +11,12 @@
     color: white;
     border-radius: 20px;
     flex: 1;
+    @media (max-width: 427px) {
+        padding-top: 0px; // sin margenes en mobile salvo top
+        gap:30px;
+    }
+
+   
 }
 
 
