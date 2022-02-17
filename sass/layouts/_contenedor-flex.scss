@@ -32,8 +32,10 @@
     @media screen and (max-width: 1025px) {
         margin:6% 10% 10% 10%;
     }
-
-
+    @media screen and (min-width: 2025px) {
+        margin: 6% 23% 10% 25%;
+    }
+    
 }
 
 .contenedor-titulo {

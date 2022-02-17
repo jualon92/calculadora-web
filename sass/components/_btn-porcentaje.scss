@@ -27,7 +27,7 @@
         }
 
 
-        @media (max-width: 1025px) {
+        @media screen and (max-width: 1025px) and (min-width:768px){
             width: 90px!important;
             
         }
@@ -60,7 +60,7 @@
             border: solid;
         }
 
-        @media (max-width: 1025px) {
+        @media screen and (max-width: 1025px) and (min-width:768px) {
             width: 84px!important;
             
         }

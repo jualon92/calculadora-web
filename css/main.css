@@ -42,6 +42,12 @@
   }
 }
 
+@media screen and (min-width: 2025px) {
+  .contenedor-calculadora {
+    margin: 6% 23% 10% 25%;
+  }
+}
+
 .contenedor-titulo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -170,14 +176,14 @@
 }
 
 .cantidad__contenido {
-  width: 100px;
+  width: 120px;
 }
 
 .cantidad__numero {
   font-size: 40px;
   color: #2aa69b;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
   font-size: 40px;
   font-weight: bolder;
 }
@@ -250,7 +256,7 @@
   color: #00494d;
 }
 
-@media (max-width: 1025px) {
+@media screen and (max-width: 1025px) and (min-width: 768px) {
   .botonera-porcentajes__btn {
     width: 90px !important;
   }
@@ -282,7 +288,7 @@
   border: solid;
 }
 
-@media (max-width: 1025px) {
+@media screen and (max-width: 1025px) and (min-width: 768px) {
   .botonera-porcentajes__custom-input {
     width: 84px !important;
   }
@@ -299,9 +305,10 @@
 }
 
 .simbolo-moneda {
-  font-size: 30px;
-  -webkit-transform: translateX(15px);
-          transform: translateX(15px);
+  font-size: 28px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  margin-right: -6px;
 }
 
 .icono-ingreso {
