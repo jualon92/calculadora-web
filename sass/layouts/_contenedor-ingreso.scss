@@ -37,7 +37,21 @@
         color: #e18571;
         position: absolute;
         margin-left: 18%;
+
+        @media (max-width:333px){
+            margin-left: 58%;
+            margin-top: -20px;
+        }
+
+        @media (max-width:478px) and (min-width:350px){
+            margin-left: 49%;
+            margin-top: -2px;
+        }
     }
+
+
+    
+
 }
 .interface {
     display: flex;
