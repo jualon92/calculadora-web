@@ -67,7 +67,6 @@
   letter-spacing: 10px;
   color: #00494d;
   font-weight: 700;
-  font-weight: 30px;
 }
 
 .contenedor-datos {
@@ -180,11 +179,10 @@
 }
 
 .cantidad__numero {
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #2aa69b;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
-  font-size: 40px;
   font-weight: bolder;
 }
 
@@ -262,6 +260,12 @@
   }
 }
 
+@media (max-width: 426px) {
+  .botonera-porcentajes__btn {
+    width: 130px !important;
+  }
+}
+
 .botonera-porcentajes__btn-custom {
   background-color: #f3f8fb;
   color: #5a7677;
@@ -325,7 +329,7 @@
 .input__ingreso {
   color: #00494d !important;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   background-color: #f3f8fb;
   border-radius: 6px;
   border: solid #f3f7f8;
