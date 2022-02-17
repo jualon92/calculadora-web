@@ -16,7 +16,7 @@ Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor]
 
 ## Lista de Tareas pendientes 
 - modo noche
-- Estaria bueno utilizar nombres de clase basado en BEM e  implementar Sass
+ 
  
 
 ## Proceso
@@ -33,11 +33,12 @@ HTML/CSS/Vanilla JS
 
  
 ### Que aprendi
+- Que css y js utilizen las mismas clases hace dificultoso refactorear css libremente.
 Flex es comodo para organizar elementos y mantener un diseño responsive.
 
 JS : no repetir logica, delegar responsabilidad en funciones auxiliares.
 
-Tomarme el tiempo en plantear soluciones posible , ventajas y desv de cada una. Comenzar con una prueba  lo mas pequeña posible
+Tomar el tiempo en plantear soluciones posible , ventajas y desv de cada una. Comenzar con una prueba  lo mas pequeña posible
 ej: probar cambiar un solo input de un idioma a otro en vez de comenzar con un diccionario
 
 
