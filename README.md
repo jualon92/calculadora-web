@@ -15,8 +15,7 @@ Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor]
  
 
 ## Lista de Tareas pendientes 
-- modo noche
-- Estaria bueno utilizar nombres de clase basado en BEM e  implementar Sass
+- modo noche 
  
 
 ## Proceso
@@ -30,6 +29,7 @@ Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor]
  
 ### Herramientas
 HTML/CSS/Vanilla JS
+nomenclatura BEM y SASS
 
  
 ### Que aprendi
