@@ -188,13 +188,13 @@
 
 @media (max-width: 427px) {
   .cantidad__numero {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 1205px) {
   .cantidad__numero {
-    font-size: 25px;
+    font-size: 1.563rem;
   }
 }
 
