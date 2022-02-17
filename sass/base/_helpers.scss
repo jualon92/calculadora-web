@@ -17,7 +17,11 @@
     opacity: 0;
 }
 
- 
+.reset-activo {
+    background-color: #26C2AD!important;
+    box-shadow: 0 4px #666;
+}
+
 
 .persona {
     position: absolute;
@@ -28,6 +32,8 @@
     color: #2aa69b;
     transform: translateY(-5px);
     font-size: 40px;
+
+    
 }
  
 .monto {

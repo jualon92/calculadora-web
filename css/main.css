@@ -25,13 +25,20 @@
 @media (max-width: 427px) {
   .contenedor-calculadora {
     margin: 10% 0 0 !important;
-    padding: 55px 25px 25px 25px;
+    /*   padding:55px 25px 25px 25px; */
+    padding: 55px 35px 25px 35px;
   }
 }
 
 @media (max-width: 400px) {
   .contenedor-calculadora {
     padding: 55px 15px 25px 15px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .contenedor-calculadora {
+    margin: 6% 10% 10% 10%;
   }
 }
 
@@ -76,13 +83,14 @@
 @media (max-width: 427px) {
   .contenedor-datos {
     width: 100% !important;
-    padding: 15px 15px 41px 15px;
+    /*    padding: 15px 15px 41px 15px;*/
+    padding: 0px 0px 41px 0px;
   }
 }
 
 @media (max-width: 400px) {
   .contenedor-datos {
-    padding: 25px 0px 35px 0px;
+    padding: 15px 0px 35px 0px;
   }
 }
 
@@ -180,6 +188,12 @@
   }
 }
 
+@media screen and (max-width: 1205px) {
+  .cantidad__numero {
+    font-size: 25px;
+  }
+}
+
 .reset {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -236,6 +250,12 @@
   color: #00494d;
 }
 
+@media (max-width: 1025px) {
+  .botonera-porcentajes__btn {
+    width: 90px !important;
+  }
+}
+
 .botonera-porcentajes__btn-custom {
   background-color: #f3f8fb;
   color: #5a7677;
@@ -260,6 +280,12 @@
   border-color: #5baa9f !important;
   outline: none;
   border: solid;
+}
+
+@media (max-width: 1025px) {
+  .botonera-porcentajes__custom-input {
+    width: 84px !important;
+  }
 }
 
 @media (max-width: 427px) {
@@ -339,7 +365,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .switch__on {
@@ -373,14 +399,39 @@
     text-align: center;*/
 }
 
+@media (max-width: 427px) {
+  .switch {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    /* transform: translateX(37px);*/
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+}
+
 .esp {
   -webkit-transform: translateX(-89px);
           transform: translateX(-89px);
 }
 
+@media (max-width: 427px) {
+  .esp {
+    width: 0;
+  }
+}
+
 .eng {
   -webkit-transform: translateX(-68px);
           transform: translateX(-68px);
+}
+
+@media (max-width: 427px) {
+  .eng {
+    width: 0;
+    -webkit-transform: translateX(-43px);
+            transform: translateX(-43px);
+  }
 }
 
 input.check-toggle-round-flat:checked ~ .off {
@@ -463,6 +514,12 @@ body {
 
 .invisible {
   opacity: 0;
+}
+
+.reset-activo {
+  background-color: #26C2AD !important;
+  -webkit-box-shadow: 0 4px #666;
+          box-shadow: 0 4px #666;
 }
 
 .persona {

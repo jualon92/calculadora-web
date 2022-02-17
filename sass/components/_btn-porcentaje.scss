@@ -25,6 +25,14 @@
             box-shadow: 0 4px #666;
             color: #00494d;
         }
+
+
+        @media (max-width: 1025px) {
+            width: 90px!important;
+            
+        }
+    
+
     }
 
     &__btn-custom {
@@ -51,6 +59,11 @@
             outline: none;
             border: solid;
         }
+
+        @media (max-width: 1025px) {
+            width: 84px!important;
+            
+        }
     }
 
     @media (max-width: 427px) {
@@ -59,5 +72,8 @@
         row-gap: 22px;
 
     }
+
+
+     
     
 }

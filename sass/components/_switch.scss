@@ -5,7 +5,7 @@
     margin: 0 5px;
     flex-basis: 100%;
     align-items: center;
-    margin-top: -50px;
+    margin-top: -40px;
     &__on {
         left: 0;
         padding-left: 2px;
@@ -36,18 +36,36 @@
         /* width: 50%;
     text-align: center;*/
     }
+
+    @media (max-width: 427px) {
+        justify-content: flex-end;
+       /* transform: translateX(37px);*/
+       transform: translateX(7px);
+    }
+ 
+
+
+
 }
 
-
-
+ 
 
 .esp {
     transform: translateX(-89px);
+
+    @media (max-width: 427px) {
+        width:0;
+    } 
 }
 
  
 .eng {
     transform: translateX(-68px);
+
+    @media (max-width: 427px) {
+        width:0;
+        transform:translateX(-43px);
+    } 
 }
 
 

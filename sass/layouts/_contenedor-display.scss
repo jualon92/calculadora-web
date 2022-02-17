@@ -39,14 +39,21 @@
         transform: translateY(-5px);
         font-size: 40px;
         font-weight: bolder;
-        
+
         @media (max-width: 427px) {
             font-size: 32px; //evitar overflow
             
         }
+
+        @media screen and (max-width: 1205px) {
+            font-size: 25px; //evitar overflow
+            
+        }
+
     }
 
     
+
 
     
 }
