@@ -1,5 +1,8 @@
 Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
-
+Utilizo 
+- HTML
+- CSS / nomenclatura BEM y SASS 
+- Vanilla JS 
  
  
 
@@ -34,6 +37,10 @@ nomenclatura BEM y SASS
  
 ### Que aprendi
 Flex es comodo para organizar elementos y mantener un diseño responsive.
+
+Preferir no utilizar clases de css para JS. 
+Cambiar nombre de clases para metodologia de css no deberia impactar en JS
+ 
 
 JS : no repetir logica, delegar responsabilidad en funciones auxiliares.
 
