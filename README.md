@@ -5,6 +5,18 @@ Utilizo :
 - CSS / nomenclatura BEM / SASS 7 in 1
 - Vanilla JS 
  
+
+## Que es?
+Se propone utilizar una pagina que divide el gastototal(gasto + propina) en partes iguales; para evitar ese silencio incomodo luego de salir a comer.
+Se agrega un switch para cambiar idiomas y no terminar haciendo macanas a la hora de pagar.
+
+
+Se asume:
+- que la comida tiene un monto
+- que hay una propina basada en %.
+- al menos 1 personas comio
+
+Si alguna no se cumple, la calculadora decide no gastar su tiempo en gente poco fiable.
  
 
 ## Imagen
