@@ -1,7 +1,7 @@
 Proyecto en proceso, basado en [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
 Utilizo 
 - HTML
-- CSS / nomenclatura BEM y SASS 
+- CSS / nomenclatura BEM / SASS 7 in 1
 - Vanilla JS 
  
  
