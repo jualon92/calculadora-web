@@ -8,6 +8,7 @@ Utilizo :
 
 ## Que es?
 Se propone utilizar una pagina que divide el gastototal(gasto + propina) en partes iguales; para evitar ese silencio incomodo luego de salir a comer.
+
 Se agrega un switch para cambiar idiomas y no terminar haciendo macanas a la hora de pagar.
 
 
