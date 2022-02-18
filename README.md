@@ -38,7 +38,7 @@ nomenclatura BEM y SASS
 ### Que aprendi
 Flex es comodo para organizar elementos y mantener un diseño responsive.
 
-Preferir no utilizar clases de css para JS. 
+Preferir no compartir clases de css con JS, limita refactoring 
 Cambiar nombre de clases para metodologia de css no deberia impactar en JS
  
 
